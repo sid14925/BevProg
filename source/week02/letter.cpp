@@ -21,7 +21,9 @@ int main()
 
 
         //letter starts here
-         cout << "\nDear " << first_name << ",\nHow are you? I am fine. I miss you.\nI wanted to write to you a long time ago.\nI hope you are doing well.\n\nHave you seen " << friend_name << " lately?\n";
+         cout << "\nDear " << first_name << ",\nHow are you? I am fine. I miss you.\n" << 
+         "I wanted to write to you a long time ago.\nI hope you are doing well.\n\n" << 
+         "Have you seen " << friend_name << " lately?\n";
         
         //call me
          if(friend_sex=='m')
