@@ -51,4 +51,6 @@ int main()
         //Yours sincerely
         cout << "\nYours sincerely\n\nCseke Vilmos\n";
 
+        return 0;
+
 }
