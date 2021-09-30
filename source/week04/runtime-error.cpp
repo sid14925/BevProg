@@ -19,8 +19,6 @@ int main() {
 
 	cout << "area1==" << area1 << '\n';
 
-
-
-
+	return 0;
 
 }
