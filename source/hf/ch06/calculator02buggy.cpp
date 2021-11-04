@@ -63,7 +63,7 @@ void Token_stream::putback(Token t)
 
 //------------------------------------------------------------------------------
 
-Token get()
+Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
         // remove token from buffer
@@ -81,7 +81,7 @@ Token get()
         return Token(ch);        // let each character represent itself
     case '.':
     case '0': case '1': case '2': case '3': case '4':
-    case '5': case '6': case '7': case '9':
+    case '5': case '6': case '7': case '8': case '9':
         {    
             cin.putback(ch);         // put digit back into the input stream
             double val;
@@ -165,7 +165,7 @@ double expression()
             t = ts.get();
             break;
         case '-':
-            left += term();    // evaluate Term and subtract
+            left -= term();    // evaluate Term and subtract
             t = ts.get();
             break;
         default: 
@@ -178,15 +178,21 @@ double expression()
 //------------------------------------------------------------------------------
 
 int main()
-cout <<  "Welcome to our simple calculator.
-Please enter expressions using floating-point numbers./n
-Operators available: + - * / % ( ). Quit by entering x."
+
+
+
+
 try
 {
+
+    cout << "Welcome to our simple calculator. Please enter expressions using floating-point numbers.\n";
+    cout << "Elérhető operátorok: ( ) + - * /. Megoldás kiiratása =-el, Kilépés x-el lehetéges.\n";
+
     while (cin) {
+        double val;
         Token t = ts.get();
 
-        if (t.kind == 'x') break; // 'q' for quit
+        if (t.kind == 'x') break; // 'x' for quit
         if (t.kind == '=')        // ';' for "print now"
             cout << "=" << val << '\n';
         else

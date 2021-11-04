@@ -1,5 +1,13 @@
 3+
 
-24.sor				class Token {
-115.sor				if (t.kind != ')') error("')' expected");
-158. sor			double left = term();
+24.sor				c betű hiányzik		class Token {
+66. sor			Token Token_stream::get()
+115.sor				" jel hiányzik		if (t.kind != ')') error("')' expected");
+158. sor			zárójel hinyzik		double left = term();
+184. sor			double val; deklarálása
+
+
+logikai:
+
+84.sor				case 8
+168. sor			-= += helyett
